@@ -15,7 +15,7 @@ function App() {
     formData.append('file', file);
 
     try {
-      const response = await fetch('http://localhost:3000/api/upload', {
+      const response = await fetch('/api/upload', {
         method: 'POST',
         body: formData
       });
@@ -43,7 +43,7 @@ function App() {
     }
 
     try {
-      const response = await fetch(`http://localhost:3000/api/rows/${id}`, {
+      const response = await fetch(`/api/rows/${id}`, {
         method: 'DELETE'
       });
 
@@ -64,7 +64,7 @@ function App() {
 
   const handleImport = async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/import', {
+      const response = await fetch('/api/import', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
